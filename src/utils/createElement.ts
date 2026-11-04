@@ -2,7 +2,7 @@ type ElementOptions = {
   children?: Array<HTMLElement | string>;
   classList?: string[];
   attributes?: Record<string, string | number | boolean>;
-  setRef?: (element: Element) => void;
+  setRef?: (element: HTMLElement) => void;
   eventHandlers?: EventHandler[];
 };
 
