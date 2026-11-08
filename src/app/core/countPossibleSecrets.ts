@@ -1,14 +1,8 @@
-export type Base = 'bin' | 'oct' | 'dec' | 'hex';
-
-export const baseCharsQuantity: Record<Base, number> = {
-  bin: 2,
-  oct: 8,
-  dec: 10,
-  hex: 16,
-};
+import type { Base } from './types.ts';
+import { BASE_CHARS_COUNT } from './constants.ts';
 
 export default function countPossibleSecrets(base: Base, length: number): number {
-  const charsInBase = baseCharsQuantity[base];
+  const charsInBase = BASE_CHARS_COUNT[base];
 
   function count(chars: number, length: number): number {
     if (length === 0) {

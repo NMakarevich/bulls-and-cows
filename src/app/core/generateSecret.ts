@@ -1,8 +1,8 @@
-import { type Base, baseCharsQuantity } from './countPossibleSecrets.ts';
+import type { Base } from './types.ts';
+import { BASE_CHARS_COUNT, CHARS } from './constants.ts';
 
 export default function generateSecret(length: number, base: Base, random = Math.random): string {
-  const chars = '0123456789ABCDEF'.split('');
-  const availableChars = chars.slice(0, baseCharsQuantity[base]);
+  const availableChars = CHARS.slice(0, BASE_CHARS_COUNT[base]);
 
   let result = '';
 
