@@ -1,3 +1,24 @@
 .main {
   flex: 1;
 }
+
+.main .container {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.settings {
+  display: flex;
+  gap: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+}
+
+.guess-field {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
