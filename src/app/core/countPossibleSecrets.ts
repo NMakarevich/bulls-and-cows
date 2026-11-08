@@ -1,6 +1,6 @@
 export type Base = 'bin' | 'oct' | 'dec' | 'hex';
 
-const baseCharsQuantity: Record<Base, number> = {
+export const baseCharsQuantity: Record<Base, number> = {
   bin: 2,
   oct: 8,
   dec: 10,
