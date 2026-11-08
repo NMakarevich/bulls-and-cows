@@ -28,6 +28,7 @@ export default function select(selectProps: SelectProps): HTMLElement {
   function toggleSelect(event: Event) {
     const { target } = event;
     if (target instanceof HTMLElement && target.role === 'combobox') {
+      if (selectComponentRef.hasAttribute('disabled')) return;
       selectFieldRef.classList.toggle('open');
       isOpen = !isOpen;
     }

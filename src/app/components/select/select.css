@@ -11,6 +11,11 @@
   cursor: pointer;
 }
 
+.select[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 .select::after {
   display: block;
   position: absolute;
