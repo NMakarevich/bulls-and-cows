@@ -3,5 +3,5 @@ export type ButtonProps = {
   text: string;
   onClick: () => void;
   classList?: string[];
-  ref?: HTMLElement;
+  setRef?: (ref: HTMLButtonElement) => void;
 };

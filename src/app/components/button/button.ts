@@ -7,8 +7,8 @@ export default function button(props: ButtonProps) {
     classList: ['button', ...(props.classList ?? [])],
     children: [props.text],
     setRef: (ref) => {
-      if (props.ref) {
-        props.ref = ref;
+      if (props.setRef) {
+        props.setRef(ref as HTMLButtonElement);
       }
     },
     attributes: { type: String(props.type ?? 'button') },
