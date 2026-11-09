@@ -22,4 +22,8 @@ describe('isValidGuess', () => {
     const result = isValidGuess('010', 2, 'bin');
     expect(result).toBe(false);
   });
+  it('should return false if any char repeat more than one time', () => {
+    const result = isValidGuess('010', 3, 'oct');
+    expect(result).toBe(false);
+  });
 });
