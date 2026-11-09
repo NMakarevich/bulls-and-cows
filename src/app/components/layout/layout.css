@@ -12,9 +12,24 @@
   gap: 20px;
 }
 
+.game {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.game.in-game {
+  display: flex;
+}
+
 .controls {
   display: flex;
   gap: 12px;
+}
+
+.guess-list {
+  padding: 0 20px;
 }
 
 .guess-field {

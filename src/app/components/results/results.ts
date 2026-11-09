@@ -35,7 +35,7 @@ export default function results() {
                           ].map((result) => {
                             return createElement('li', {
                               classList: ['results-item'],
-                              children: [`turns: ${result.turns} time: ${result.time}`],
+                              children: [`Ходов: ${result.turns}. Время: ${result.time}`],
                             });
                           }),
                         ],
