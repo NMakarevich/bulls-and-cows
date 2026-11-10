@@ -76,8 +76,8 @@ export default function layout() {
           time: gameTime,
           turns: guessTurns,
         });
-        guessList.appendChild(
-          createElement('li', {
+        guessList.after(
+          createElement('p', {
             children: [`Игра окончена. Количество попыток: ${guessTurns}, время: ${gameTime}`],
           })
         );
