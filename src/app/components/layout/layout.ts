@@ -61,13 +61,16 @@ export default function layout() {
     if (
       !guess ||
       guess.length !== gameSession.length ||
-      isEnteredGuess(gameSession.guessHistory, guess)
+      isEnteredGuess(
+        gameSession.guessHistory.map(({ guess }) => guess),
+        guess
+      )
     ) {
       return;
     }
     if (isValidGuess(guess, gameSession.length, gameSession.base)) {
       const { bulls, cows } = evaluateGuess(gameSession.secret, guess);
-      gameSession.guessHistory = [...gameSession.guessHistory, guess];
+      gameSession.guessHistory = [...gameSession.guessHistory, { guess, bulls, cows }];
       guessList.appendChild(guessElement({ guess, bulls, cows }));
       if (bulls === gameSession.length) {
         const gameTime = finish();

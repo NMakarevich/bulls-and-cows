@@ -3,7 +3,7 @@ import type { Base } from '../../core/types.ts';
 export type GameSession = {
   base: Base;
   length: number;
-  guessHistory: string[];
+  guessHistory: GuessTurn[];
   secret: string;
 };
 
