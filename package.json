@@ -1,0 +1,38 @@
+{
+  "name": "bulls-and-cows",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write",
+    "test": "vitest",
+    "prepare": "husky",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "lint-staged": {
+    "**/*.{html,css,ts}": "./node_modules/.bin/prettier --check",
+    "**/*.{ts}": "./node_modules/.bin/eslint"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@vitest/browser-playwright": "^5.1.0",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "gh-pages": "^6.3.0",
+    "globals": "^17.14.0",
+    "husky": "^9.1.7",
+    "jsdom": "^29.1.1",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.9.10",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^8.3.5",
+    "vitest": "^5.1.0"
+  }
+}

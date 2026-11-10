@@ -1,0 +1,66 @@
+:root {
+  --bg-color: #fff;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 100px;
+  position: relative;
+  cursor: pointer;
+}
+
+.select[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.select::after {
+  display: block;
+  position: absolute;
+  content: '˅';
+  right: 16px;
+  font-weight: bold;
+  transition: transform 0.4s;
+  pointer-events: none;
+}
+
+.select:has(.select-field.open)::after {
+  transform: rotate(180deg);
+}
+
+.select-field {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--bg-color);
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.select-options {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 38px;
+  border: 1px solid black;
+  border-radius: 8px;
+  list-style: none;
+  overflow: hidden;
+}
+
+.select-field.open + .select-options {
+  display: flex;
+}
+
+.select-option {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  background-color: var(--bg-color);
+}
+
+.select-option:not(:last-child) {
+  border-bottom: 1px solid black;
+}

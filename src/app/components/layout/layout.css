@@ -1,0 +1,52 @@
+.main {
+  flex: 1;
+}
+
+.main .container {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.settings {
+  display: flex;
+  gap: 20px;
+}
+
+.game {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.game.in-game {
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+}
+
+.guess-list {
+  padding: 0 20px;
+}
+
+.guess-field {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.results [class*='-list'] {
+  list-style: none;
+  margin-left: 16px;
+}
