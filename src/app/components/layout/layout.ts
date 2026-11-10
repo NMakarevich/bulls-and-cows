@@ -29,6 +29,7 @@ export default function layout() {
   let gameField: HTMLElement;
   let secretVariants: HTMLElement;
   let resultsElement: HTMLElement;
+  let finishMessage: HTMLElement;
   const secretVariantsStorage: SecretVariantsStorage = {
     bin: {},
     oct: {},
@@ -82,6 +83,7 @@ export default function layout() {
         guessList.after(
           createElement('p', {
             children: [`Игра окончена. Количество попыток: ${guessTurns}, время: ${gameTime}`],
+            setRef: (element) => (finishMessage = element),
           })
         );
       }
@@ -126,6 +128,7 @@ export default function layout() {
     lengthSelect.removeAttribute('disabled');
     startGameButton.disabled = false;
     gameField.classList.remove('in-game');
+    finishMessage.remove();
     gameSession = { ...gameSessionInit };
   }
 
