@@ -20,7 +20,7 @@ export default function footer() {
             children: [
               createElement('img', {
                 classList: ['link__image'],
-                attributes: { src: '/rslogo.svg', alt: 'logo' },
+                attributes: { src: 'rslogo.svg', alt: 'logo' },
               }),
             ],
           }),
